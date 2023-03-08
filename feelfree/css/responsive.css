@@ -1,0 +1,210 @@
+@media screen and (max-width: 960px){
+
+    /* Start Edit Profile Part */
+
+    .eprofile-area form{
+        width: 80%;
+    }
+
+    /* End Edit Profile Part */
+
+    /* Start Create Post Part */
+
+    .cpost-area form{
+        width: 80%;
+    }
+
+    /* End Create Post Part */
+
+    /* Start View Post Part */
+
+    .vpost-area .vpost-container{
+        width: 80%;
+    }
+
+    /* End View Post Part */
+
+    /* Start Donate Part */
+
+    .donate-area form{
+        width: 80%;
+    }
+
+    /* End Donate Part */
+
+    /* Start Verification Part */
+
+    .ver-area .ver-content{
+        width: 80%;
+    }
+
+    /* End Verification Part */
+
+    /* Start Member Pending Verification Part */
+
+    .vmpv-area .vmpv-container{
+        width: 80%;
+    }
+
+    /* End Member Pending Verification Part */
+
+    /* Start Settings Part */
+
+    .settings-area form{
+        width: 80%;
+    }
+
+    /* End Settings Part */
+
+}
+
+@media screen and (max-width: 560px){
+
+    .top-error{
+        width: 85%;
+    }
+
+    /* Start Login Part */
+
+    .login-area .login-box{
+        width: 85%;
+    }
+
+    /* End Login Part */
+
+    /* Start Registration Part */
+
+    .reg-area .reg-box{
+        width: 85%;
+    }
+
+    /* End Registration Part */
+
+    /* Start Forget Password Part */
+
+    .fgtpass-area .fgtpass-box{
+        width: 85%;
+        margin-top: 150px;
+    }
+
+    /* End Forget Password Part */
+
+}
+
+@media screen and (max-width: 475px){
+   
+    /* Start Header Part */
+
+    header{
+        text-align: center;
+    }
+
+    header .logo-area{
+        float: none;
+        margin: auto;
+    }
+
+    header .menu{
+        float: none;
+    }
+
+    header .menu a span{
+        display: none;
+    }
+    
+    /* End Header Part */
+
+    /* Start Login Part */
+
+    .login-area .login-box{
+        margin-top: 150px;
+    }
+
+    /* End Login Part */
+
+    /* Start Home Part */
+
+    .post-area .post-box .post-header .left{
+        float: none;
+    }
+
+    .post-area .post-box .post-header .right{
+        float: none;
+    }
+
+    /* End Home Part */
+
+    /* Start Edit Profile Part */
+
+    .eprofile-area form{
+        width: 100%;
+    }
+
+    /* End Edit Profile Part */
+
+    /* Start Create Post Part */
+
+    .cpost-area form{
+        width: 100%;
+    }
+
+    /* End Create Post Part */
+
+    /* Start View Post Part */
+
+    .vpost-area .vpost-container{
+        width: 100%;
+    }
+
+    /* End View Post Part */
+
+    /* Start Donate Part */
+
+    .donate-area form{
+        width: 100%;
+    }
+
+    /* End Donate Part */
+
+    /* Start Verification Part */
+
+    .ver-area .ver-content{
+        width: 100%;
+    }
+
+    /* End Verification Part */
+
+    /* Start Member Pending Verification Part */
+
+    .vmpv-area .vmpv-container{
+        width: 100%;
+    }
+
+    /* End Member Pending Verification Part */
+
+    /* Start Settings Part */
+
+    .settings-area form{
+        width: 100%;
+    }
+
+    /* End Settings Part */
+
+    /* Start Footer Part */
+
+    footer .copyright-area{
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .social-area{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    /* End Footer Part */
+    
+}

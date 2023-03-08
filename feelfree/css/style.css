@@ -1,0 +1,1269 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+html{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.clearfix{
+    clear: both;
+}
+
+body{
+    margin: 0;
+    background-color: #F0FFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+    max-width: 1170px;
+}
+
+.pnf{
+    min-height: 100vh;
+    background-color: #634A88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pnf-content{
+    max-width: 430px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+}
+
+.coming-soon{
+    text-align: center;
+    max-width: 650px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+}
+
+.coming-soon::after{
+    content: 'This section will be available soon!';
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.no-content-view{
+    text-align: center;
+    max-width: 650px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+}
+
+.no-content-view::after{
+    content: 'No data available!';
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.show-more{
+    margin: 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.show-more a{
+    display: inline-block;
+    color: #FFF;
+    background-color: #367FA9;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform .2s;
+}
+
+.show-more a:hover{
+    transform: scale(1.1);
+}
+
+.show-more strong, .show-more span{
+    display: inline-block;
+    color: #FFF;
+    background-color: #079992;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.show-more span{
+    background-color: #367FA9;
+}
+
+.line-error{
+    visibility: hidden;
+}
+
+.top-error{
+    color: #FFF;
+    background-color: #C9453E;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: Open Sans, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 15px auto;
+    width: 480px;
+    position: relative;
+}
+
+.top-error .cross{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.top-error .cross:hover{
+    cursor: pointer;
+}
+
+.top-error a{
+    color: #2C3A47;
+    text-decoration: none;
+}
+
+.top-error a:hover{
+    text-decoration: underline;
+}
+
+/* Start Header Part */
+
+header{
+    background-color: #C3C3C3;
+    padding: 15px 0;
+}
+
+header .logo-area{
+    background: url("http://localhost/feelfree/css/assets/feelfree-logo.png");
+    background-size: cover;
+    width: 210px;
+    height: 50px;
+    float: left;
+}
+
+header .menu{
+    margin-top: 15px;
+    float: right;
+}
+
+header .menu a{
+    color: #2C3A47;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform .5s;
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+/* End Header Part */
+
+/* Start Login Part */
+
+.login-area{
+    position: relative;
+    min-height: calc(100vh - 60px);
+}
+
+.login-area .login-container{
+    min-height: 620px;
+}
+
+.login-area .login-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 110px auto 0;
+    background-color: #F0FFFF;
+    border-radius: 10px;
+    width: 480px;
+    height: 380px;
+    border: 1px solid #111;
+    overflow: auto;
+}
+
+.login-area .login-box .login-title{
+    padding: 3px 0;
+    text-align: center;
+    background-color: #696969;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.login-area .login-box .login-title h4{
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.login-area .login-box .login-body{
+    padding: 25px 50px;
+}
+
+.login-area .login-box .login-body .cfa{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.login-area .login-box .login-body label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.login-area .login-box .login-body input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.login-area .login-box .login-body input[type="checkbox"]{
+    width: auto;
+}
+
+.login-area .login-box .login-body form > input{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.login-area .login-box .login-body form > input:hover{
+    transform: scale(1.2);
+}
+
+.login-area .login-box .login-body .login-email, .login-area .login-box .login-body .login-pass{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.login-area .login-box .login-body .login-pass .control-pass i:hover{
+    cursor: pointer;
+}
+
+.login-area .login-box .login-body #hide-pass{
+    display: none;
+}
+
+.login-area .login-box .login-footer{
+    padding: 0 50px 25px;
+}
+
+.login-area .login-box .login-footer a{
+    text-decoration: none;
+    color: #696969;
+}
+
+.login-area .login-box .login-footer a:hover{
+    text-decoration: underline;
+    color: #111;
+}
+
+/* End Login Part */
+
+/* Start Registration Part */
+
+.reg-area{
+    position: relative;
+    min-height: 780px;
+}
+
+.reg-area .reg-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 90px auto 0;
+    background-color: #F0FFFF;
+    border: 1px solid #111;
+    border-radius: 10px;
+    width: 480px;
+    height: 620px;
+    overflow: auto;
+}
+
+.reg-area .reg-box .reg-title{
+    padding: 3px 0;
+    text-align: center;
+    background-color: #696969;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.reg-area .reg-box .reg-title h4{
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.reg-area .reg-box .reg-body{
+    padding: 25px 50px;
+}
+
+.reg-area .reg-box .reg-body .cfa{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.reg-area .reg-box .reg-body label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.reg-area .reg-box .reg-body label:last-child{
+    display: inline;
+}
+
+.reg-area .reg-box .reg-body input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.reg-area .reg-box .reg-body input[type="radio"], .reg-area .reg-box .reg-body input[type="checkbox"]{
+    width: auto;
+}
+
+.reg-area .reg-box .reg-body form > input{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.reg-area .reg-box .reg-body form > input:hover{
+    transform: scale(1.2);
+}
+
+.reg-area .reg-box .reg-body .reg-name, .reg-area .reg-box .reg-body .reg-phone, .reg-area .reg-box .reg-body .reg-email, .reg-area .reg-box .reg-body .reg-birthday, .reg-area .reg-box .reg-body .reg-gender, .reg-area .reg-box .reg-body .acceptance{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.reg-area .reg-box .reg-footer{
+    padding: 0 50px 25px;
+}
+
+.reg-area .reg-box .reg-body .acceptance a, .reg-area .reg-box .reg-footer a{
+    text-decoration: none;
+    color: #696969;
+}
+
+.reg-area .reg-box .reg-body .acceptance a:hover, .reg-area .reg-box .reg-footer a:hover{
+    text-decoration: underline;
+    color: #111;
+}
+
+/* End Registration Part */
+
+/* Start Forget Password Part */
+
+.fgtpass-area{
+    position: relative;
+    min-height: 620px;
+}
+
+.fgtpass-area .fgtpass-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 90px auto 0;
+    background-color: #F0FFFF;
+    border: 1px solid #111;
+    border-radius: 10px;
+    width: 480px;
+    height: 400px;
+    overflow: auto;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-title{
+    padding: 3px 0;
+    text-align: center;
+    background-color: #696969;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-title h4{
+    color: #FFF;
+    letter-spacing: 1px;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body{
+    padding: 25px 50px;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body .cfa{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body form > input{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body form > input:hover{
+    transform: scale(1.2);
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-body .fgtpass-email, .fgtpass-area .fgtpass-box .fgtpass-body .fgtpass-otp{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-footer{
+    padding: 0 50px 25px;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-footer a{
+    text-decoration: none;
+    color: #696969;
+}
+
+.fgtpass-area .fgtpass-box .fgtpass-footer a:hover{
+    text-decoration: underline;
+    color: #111;
+}
+
+/* End Forget Password Part */
+
+/* Start Home Part */
+
+.post-area .post-box{
+    max-width: 650px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+}
+
+.post-area .post-box .post-header .left{
+    float: left;
+}
+
+.post-area .post-box .post-header .right{
+    float: right;
+}
+
+.post-area .post-box .post-body{
+    margin-bottom: 10px;
+}
+
+.post-area .post-box .post-body .user{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post-area .post-box .post-body .user .user-img{
+    width: 25px;
+    float: left;
+}
+
+.post-area .post-box .post-body .user .user-img img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.post-area .post-box .post-body .user h4{
+    margin: 0;
+}
+
+.post-area .post-box .post-body .user a{
+    text-decoration: none;
+    color: #634A88;
+}
+
+.post-area .post-box .post-body .title{
+    margin-bottom: 5px;
+}
+
+/*
+.post-area .post-box .post-footer{
+    text-align: center;
+    padding: 7px 0;
+    background-color: #2C3A47;
+    overflow: hidden;
+}
+*/
+
+.post-area .post-box .post-footer .pfm{
+    text-align: center;
+    padding: 7px 0;
+    background-color: #2C3A47;
+}
+
+.post-area .post-box .post-footer .left{
+    float: left;
+    width: 50%;
+    position: relative;
+    border-right: 1px solid #FFF;
+}
+
+.post-area .post-box .post-footer .right{
+    float: right;
+    width: 50%;
+    position: relative;
+    border-left: 1px solid #FFF;
+}
+
+.post-area .post-box .post-footer .left .qview-menu{
+    display: none;
+    background-color: #2C3A47;
+    padding: 5px 15px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    width: 65px;
+    margin: auto;
+}
+
+.post-area .post-box .post-footer .left .qview-menu a:hover{
+    color: #DC143C;
+}
+
+.post-area .post-box .post-footer .left .qview-menu form{
+    float: left;
+}
+
+.post-area .post-box .post-footer a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.post-area .post-box .post-progress progress{
+    width: 100%;
+}
+
+/* End Home Part */
+
+/* Start Profile Part */
+
+.user-area .user-box{
+    max-width: 850px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.user-area .user-box .user-img{
+    max-height: 180px;
+    max-width: 180px;
+    margin: auto;
+    border: 1px solid #A9A9A9;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.user-area .user-box .user-img #file-btn{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #DC143C;
+}
+
+.user-area .user-box .user-img #file-btn:hover{
+    cursor: pointer;
+}
+
+.user-area .user-box .user-img img{
+    width: 100%;
+}
+
+.user-area .user-box form{
+    margin-top: 10px;
+}
+
+.user-area .user-box form .line-error{
+    visibility: visible;
+    display: none;
+}
+
+.user-area .user-box form input[type="submit"]{
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.user-area .user-box form input[type="submit"]:hover{
+    transform: scale(1.2);
+}
+
+.user-area .user-box .user-btn{
+    padding: 7px 0;
+    background-color: #2C3A47;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.user-area .user-box .user-btn a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.post-area .post-box .ppf{
+    text-align: center;
+    padding: 7px 0;
+    background-color: #2C3A47;
+}
+
+/* End Profile Part */
+
+/* Start Edit Profile Part */
+
+.eprofile-area form{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.eprofile-area form .cfa{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.eprofile-area form fieldset{
+    margin-bottom: 40px;
+}
+
+.eprofile-area label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.eprofile-area fieldset label{
+    display: inline;
+    margin-bottom: 0;
+}
+
+.eprofile-area .eprofile-name input, .eprofile-area .eprofile-phone input, .eprofile-area .eprofile-email input, .eprofile-area .eprofile-password input, .eprofile-area .eprofile-birthday input, .eprofile-area .eprofile-level select, .eprofile-area form > input:last-child{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.eprofile-area form > input:last-child{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.eprofile-area form > input:last-child:hover{
+    transform: scale(1.2);
+}
+
+.eprofile-area .eprofile-name, .eprofile-area .eprofile-phone, .eprofile-area .eprofile-email, .eprofile-area .eprofile-password{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.eprofile-area .eprofile-birthday, .eprofile-area .eprofile-gender, .eprofile-area .eprofile-level{
+    margin-bottom: 12px;
+}
+
+/* End Edit Profile Part */
+
+/* Start Create Post Part */
+
+.cpost-area form{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.cpost-area form .cfa{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.cpost-area form fieldset{
+    margin-bottom: 40px;
+}
+
+.cpost-area form input, .cpost-area form textarea{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.cpost-area form textarea{
+    resize: none;
+}
+
+.cpost-area form > input:last-child{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.cpost-area form > input:last-child:hover{
+    transform: scale(1.2);
+}
+
+.cpost-area .post-title, .cpost-area .post-description, .cpost-area .post-amount, .cpost-area .post-file{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.cpost-area .post-file .cfa{
+    top: 9px;
+}
+
+.cpost-area .post-file .view-btn{
+    position: absolute;
+    right: 0;
+}
+
+.cpost-area .post-file .view-btn a{
+    display: inline-block;
+    padding: 0 35px;
+    text-decoration: none;
+    color: #111;
+    line-height: 2;
+}
+
+/* End Create Post Part */
+
+/* Start View Post Part */
+
+.vpost-area .vpost-container{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.vpost-area .vpost-container fieldset{
+    margin-bottom: 12px;
+}
+
+.vpost-area .vpost-container input, .vpost-area .vpost-container textarea{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.vpost-area .vpost-container textarea{
+    resize: none;
+}
+
+.vpost-area .vpost-container .view-btn{
+    text-align: center;
+    padding: 7px 0;
+    background-color: #2C3A47;
+    margin-top: 12px;
+}
+
+.vpost-area .vpost-container .view-btn a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* End View Post Part */
+
+/* Start Donate Part */
+
+.donate-area form{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.donate-area form .cfa{
+    position: absolute;
+    top: 29px;
+    right: 20px;
+    visibility: hidden;
+}
+
+.donate-area .post-title, .donate-area .post-amount{
+    position: relative;
+}
+
+.donate-area form fieldset{
+    margin-bottom: 12px;
+}
+
+.donate-area form textarea{
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.donate-area .post-title .view-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.donate-area .post-title .view-btn a{
+    color: #2C3A47;
+}
+
+.donate-area .post-amount input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.donate-area form > input[type="submit"]{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.donate-area form > input[type="submit"]:hover{
+    transform: scale(1.2);
+}
+
+/* End Donate Part */
+
+/* Start Member Pending Part */
+
+.post-area .post-box .post-footer .right .qview-menu{
+    display: none;
+    background-color: #2C3A47;
+    padding: 5px 15px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    width: 65px;
+    margin: auto;
+}
+
+.post-area .post-box .post-footer .right .qview-menu a:hover{
+    color: #DC143C;
+}
+
+.post-area .post-box .post-footer .right .qview-menu form{
+    float: left;
+}
+
+/* End Member Pending Part */
+
+/* Start Verification Part */
+
+.ver-area .ver-content{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.ver-area .ver-content .cfa{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.ver-area .ver-content fieldset{
+    margin-bottom: 40px;
+}
+
+.ver-area .ver-content .pending-area{
+    text-align: center;
+}
+
+.ver-area .ver-content .pending-area .pending-anm, .ver-area .ver-content .success-area .success-anm{
+    max-width: 250px;
+    margin: auto;
+}
+
+.ver-area .ver-content .pending-area .pending-anm img, .ver-area .ver-content .success-area .success-anm img{
+    width: 100%;
+}
+
+.ver-area label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.ver-area fieldset label{
+    display: inline;
+    margin-bottom: 0;
+}
+
+.ver-area .ver-content input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.ver-area .ver-content > input:last-child{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.ver-area .ver-content > input:last-child:hover{
+    transform: scale(1.2);
+}
+
+.ver-area .ver-bcn, .ver-area .ver-nidn, .ver-area .ver-bcp, .ver-area .ver-nidp{
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.ver-area .ver-bcp .cfa, .ver-area .ver-nidp .cfa{
+    top: 33px;
+}
+
+/* End Verification Part */
+
+/* Start Member Pending Verification Part */
+
+.mpv-area .mpv-box{
+    max-width: 650px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.mpv-area .mpv-box h4{
+    margin: 0;
+}
+
+.mpv-area .mpv-box h4 a{
+    text-decoration: none;
+    color: #634A88;
+}
+
+/* End Member Pending Verification Part */
+
+/* Start View Member Pending Verification Part */
+
+.vmpv-area .vmpv-container{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.vmpv-area .vmpv-container fieldset{
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.vmpv-area .vmpv-container fieldset a:hover{
+    color: #DC143C;
+}
+
+.vmpv-area .vmpv-container fieldset .fc{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.vmpv-area .vmpv-container fieldset .lc{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.vmpv-area .vmpv-container .view-btn{
+    text-align: center;
+    padding: 7px 0;
+    background-color: #2C3A47;
+    margin-top: 12px;
+}
+
+.vmpv-area .vmpv-container .view-btn a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* End View Member Pending Verification Part */
+
+/* Start Member List Part */
+
+.ml-area .form-container{
+    max-width: 690px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+.ml-area .formSearch{
+    position: relative;
+}
+
+.ml-area .formSearch input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.ml-area .formSearch button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    color: #0066CC;
+    padding: 5px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.ml-area .formSearch button:hover{
+    color: #DC143C;
+    transform: scale(1.2);
+}
+
+.ml-area .formReset{
+    margin-top: 5px;
+}
+
+.ml-area .formReset button{
+    border: 1px solid #808080;
+    border-radius: 5px;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.ml-area .formReset button:hover{
+    transform: scale(1.2);
+}
+
+.ml-area .ml-box{
+    max-width: 650px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    margin: 20px auto;
+    padding: 20px 40px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #634A88;
+    background-color: #FFF;
+    text-align: center;
+    position: relative;
+}
+
+.ml-area .ml-box .fa{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.ml-area .ml-box .fa:hover{
+    color: #DC143C;
+}
+
+.ml-area .ml-box h4{
+    margin: 0;
+}
+
+.ml-area .ml-box h4 a{
+    text-decoration: none;
+    color: #634A88;
+}
+
+/* End Member List Part */
+
+/* Start Settings Part */
+
+.settings-area form{
+    width: 50%;
+    padding: 25px 50px;
+    margin: auto;
+}
+
+.settings-area form .cfa{
+    position: absolute;
+    top: 29px;
+    right: 5px;
+    visibility: hidden;
+}
+
+.settings-area form fieldset{
+    margin-bottom: 40px;
+}
+
+.settings-area label{
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.settings-area fieldset label{
+    display: inline;
+    margin-bottom: 0;
+}
+
+.settings-area .settings-name input, .settings-area .settings-phone input, .settings-area .settings-email input, .settings-area .settings-password input, .settings-area form > input:last-child{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+}
+
+.settings-area form > input:last-child{
+    width: auto;
+    background-color: #696969;
+    color: #FFF;
+    padding: 5px 15px;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.settings-area form > input:last-child:hover{
+    transform: scale(1.2);
+}
+
+.settings-area .settings-name, .settings-area .settings-phone, .settings-area .settings-email, .settings-area .settings-password{
+    margin-bottom: 12px;
+}
+
+.settings-area .settings-password{
+    position: relative;
+}
+
+/* End Settings Part */
+
+/* Start Footer Part */
+
+footer{
+    margin-top: auto;
+    color: #111;
+    background-color: #C3C3C3;
+    padding: 25px 0;
+}
+
+footer .copyright-area{
+    width: 50%;
+   float: left;
+    align-items: center;
+    text-align: center;
+}
+
+footer .social-area{
+    width: 50%;
+    float: right;
+    letter-spacing: 5px;
+    text-align: right;
+}
+
+footer .social-area a:last-child{
+    letter-spacing: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #111;
+}
+
+/* End Footer Part */

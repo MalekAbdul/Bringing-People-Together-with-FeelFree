@@ -1,0 +1,130 @@
+<?php
+    session_start();
+    require_once '../site.php';
+    $title = 'Edit post';
+
+    if(isset($_SESSION['uid'])){
+        $uid = $_SESSION['uid'];
+        require_once '../db/connection.php';
+
+        if(isset($_GET['ui']) && isset($_GET['pid'])){
+            $ui = ((base64_decode($_GET['ui']) - 387) / 137);
+            $pid = $_GET['pid'];
+
+            $stmtExist = "select * from posts where uid = '$ui' and pid = '$pid' and status = 1";
+            $resultExist = mysqli_query($conn, $stmtExist);
+            $countExist = mysqli_num_rows($resultExist);
+
+            if($countExist < 1){
+                header('location: profile');
+            } else{
+                $stmtLevel = "select level from users where uid = '$uid'";
+                $resultLevel = mysqli_query($conn, $stmtLevel);
+                $fetchLevel = mysqli_fetch_array($resultLevel);
+
+                if($fetchLevel['level'] == 1){}
+                else{
+                    header('location: profile');
+                }
+            }
+        } else{
+            header('location: profile');
+        }
+
+        $stmt = "select * from posts where uid = '$ui' and pid = '$pid' and status = 1";
+        $result = mysqli_query($conn, $stmt);
+        $fetch = mysqli_fetch_array($result);
+?>
+
+        <!doctype html>
+        <html lang="en">
+            <?php require_once '../site_head.php'; ?>
+            <body>
+                <?php require_once 'header.php'; ?>
+
+                <?php
+                    if(isset($_SESSION['post_success'])){
+                        echo '<script type="text/javascript">Swal.fire({
+                                icon: "success",
+                                title: "Post update successful!",
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        </script>';
+
+                        unset($_SESSION['post_success']);
+                    } elseif(isset($_SESSION['post_fail'])){
+                        echo '<script type="text/javascript">Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "Post update unsuccessful!",
+                            })
+                        </script>';
+
+                        unset($_SESSION['post_fail']);
+                    }
+                ?>
+
+                <section class="cpost-area">
+                    <div class="container">
+                        <form action="../cnnction/edit_post.php" method="post" enctype="multipart/form-data" onsubmit="return epost(this);">
+                            <fieldset>
+                                <legend>Note</legend>
+                                <label for="">***Please, edit carefully.</label>
+                            </fieldset>
+
+                            <div class="post-title">
+                                <input name="title" id="title" type="text" value="<?php echo $fetch['title']; ?>">
+
+                                <i class="cfa fa fa-check-circle"></i>
+                                <i class="cfa fa fa-exclamation-circle"></i>
+                                <small class="line-error">Please, provide your title!</small>
+                            </div>
+                            <div class="post-description">
+                                <textarea name="description" id="description" cols="30" rows="10"><?php echo $fetch['description']; ?></textarea>
+
+                                <i class="cfa fa fa-check-circle"></i>
+                                <i class="cfa fa fa-exclamation-circle"></i>
+                                <small class="line-error">Please, provide your description!</small>
+                            </div>
+                            <div class="post-amount">
+                                <input name="amount" id="amount" type="text" value="<?php echo $fetch['ta']; ?>">
+
+                                <i class="cfa fa fa-check-circle"></i>
+                                <i class="cfa fa fa-exclamation-circle"></i>
+                                <small class="line-error">Please, provide your amount!</small>
+                            </div>
+                            <div class="post-file">
+                                <div class="view-btn">
+                                    <a href="../files/documents/<?php echo $fetch['file']; ?>" data-lightbox="<?php echo $fetch['title']; ?>" data-title="<?php echo $fetch['title']; ?>">View</a>
+                                </div>
+
+                                <input name="file" id="file" type="file">
+
+                                <i class="cfa fa fa-check-circle"></i>
+                                <i class="cfa fa fa-exclamation-circle"></i>
+                                <small class="line-error">Please, provide your file!</small>
+                            </div>
+
+                            <input name="pid" type="text" value="<?php echo $_GET['pid']; ?>" hidden>
+                            <input name="link" type="text" value="<?php echo $fullUrl; ?>" hidden>
+
+                            <input type="submit" value="Update">
+                        </form>
+                    </div>
+                </section>
+
+                <?php require_once '../footer.php'; ?>
+                <?php require_once '../site_body.php'; ?>
+            </body>
+        </html>
+
+<?php
+    } else{
+        $string = 'Access Denied. To view this page, you must log in to this page.';
+        $en_msg = base64_encode($string);
+        $_SESSION['login_first'] = $en_msg;
+
+        $link = urlencode($fullUrl);
+        header('location: ../login?src='.$link);
+    }
